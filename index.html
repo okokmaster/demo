@@ -35,7 +35,7 @@
       //console.log( "Data Loaded: " + data );
       master = data.query.results.json.json;
       console.log(master)
-      firsttweet = _.where(results, {in_reply_to_screen_name: tweetname})[0];
+      firsttweet = _.where(master, {in_reply_to_screen_name: tweetname})[0];
       
       tco = firsttweet.text.split("").pop().trim();
       console.log("tco",tco);
