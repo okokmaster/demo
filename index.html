@@ -37,7 +37,7 @@
       console.log(master)
       firsttweet = _.where(master, {in_reply_to_screen_name: tweetname})[0];
       
-      tco = firsttweet.text.split("").pop().trim();
+      tco = firsttweet.text.split("go").pop().trim();
       console.log("tco",tco);
       
       //$("#answers").text("answers");
