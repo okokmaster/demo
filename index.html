@@ -19,11 +19,12 @@
   .done(function( data ) {
     //console.log( "Data Loaded: " + data );
     results = data.query.results.json.json;
-    var tweetid = location.search.split("=").pop();
+    var tweetid = location.search.split("id=").pop().split("&")[0]
+    var source = location.search.split("=").pop();
     var tweet = _.where(results, {id: tweetid})[0];
     
-    $("#tweetname").text("@okokmaster");
-    $("#tweettext").text(tweet.text.split("#new"));
+    $("#tweetname").text("@"+source);
+    $("#tweettext").text(tweet.text.split("#new").pop().trim());
     
   });
   
