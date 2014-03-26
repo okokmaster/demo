@@ -23,7 +23,7 @@
     var source = location.search.split("=").pop();
     var tweet = _.where(results, {id: tweetid})[0];
     
-    $("#tweetname").text("@"+source);
+    $("#tweetname").text("@"+tweetname);
     $("#tweettext").text(tweet.text.split("#new").pop().trim());
     
   });
