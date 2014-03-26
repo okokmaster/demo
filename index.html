@@ -23,7 +23,7 @@
     var tweet = _.where(results, {id: tweetid})[0];
     
     $("#tweetname").text("@okokmaster");
-    $("#tweettext").text(tweet.text.split("#new"));
+    $("#tweettext").text(tweet.text.split("#new").pop().trim());
     
   });
   
